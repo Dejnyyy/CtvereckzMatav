@@ -12,16 +12,16 @@ namespace CtvereckzMatav
 {
     public abstract partial class Ctverecek : UserControl
     {
-        private Ctverecek()
+        protected Ctverecek()
         {
             InitializeComponent();
         }
 
         protected void Ctverecek_MouseClick(object sender, MouseEventArgs e)
         {
-
+            KlikMysi(e);
         }
-        protected abstract void MouseClick(MouseEventArgs e);
+        protected abstract void KlikMysi(MouseEventArgs e);
         
     }
 }
