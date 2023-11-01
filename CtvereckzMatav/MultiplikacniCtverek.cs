@@ -23,8 +23,18 @@ namespace CtvereckzMatav
         }
         private void Rozmnoz()
         {
-            MultiplikacniCtverek multiplikacniCtverek = new MultiplikacniCtverek();
-            Parent.Controls.Add(multiplikacniCtverek);
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                     MultiplikacniCtverek multiplikacniCtverek = new MultiplikacniCtverek();
+                     Parent.Controls.Add(multiplikacniCtverek);
+                    multiplikacniCtverek.Location = new Point(j*Width /2, i*Height/2);
+                    multiplikacniCtverek.Width = Width / 2;
+                    multiplikacniCtverek.Height = Height / 2;
+                }
+            }
         }
         private void MultiplikacniCtverek_Load(object sender, EventArgs e)
         {
