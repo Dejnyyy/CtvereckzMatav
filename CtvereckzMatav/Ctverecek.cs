@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace CtvereckzMatav
 {
-    public partial class Ctverecek : UserControl
+    public abstract partial class Ctverecek : UserControl
     {
-        public Ctverecek()
+        private Ctverecek()
         {
             InitializeComponent();
         }
+
+        protected void Ctverecek_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+        protected abstract void MouseClick(MouseEventArgs e);
+        
     }
 }
